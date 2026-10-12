@@ -13,8 +13,10 @@ FinWise AI is a complete, production-grade personal finance management and expen
 
 ## 🌐 Public Deployment & Live Links
 
+- **Netlify Public Production Site**: [https://wonderful-cheesecake-54ff2c.netlify.app](https://wonderful-cheesecake-54ff2c.netlify.app)
+  > *(Default unlock password: `My-Drop-Site` — or claim ownership to your personal Netlify dashboard with the [Claim Link](https://app.netlify.com/drop/wonderful-cheesecake-54ff2c#drop_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3OTE4MTM4MjgsImV4cCI6MTc5MTgxNzQyOCwiaXNzIjoiTmV0bGlmeSIsInNlc3Npb25faWQiOiJlNGYyMTkyNi00ZTg4LTQyZTQtOTljOC0zYWFmZDE2ZDZlNWQifQ.XiTpVzcIe3XELF8ubWNNMnWCo95h7cCcSDg-gWS3-FE))*
 - **Public GitHub Repository**: [https://github.com/Anil-192005/finwise-ai](https://github.com/Anil-192005/finwise-ai)
-- **Live Public Access Tunnel (HTTPS)**: [https://tiny-donuts-laugh.loca.lt](https://tiny-donuts-laugh.loca.lt)
+- **Live Unified Tunnel (HTTPS)**: [https://tiny-donuts-laugh.loca.lt](https://tiny-donuts-laugh.loca.lt)
   > *(If prompted with the Localtunnel friendly reminder, enter Endpoint IP: `122.172.83.23` and click "Click to Submit")*
 - **Live Demo Credentials**:
   - Email: `demo@finwise.ai`
@@ -22,6 +24,16 @@ FinWise AI is a complete, production-grade personal finance management and expen
   - Currency: `INR (₹)` (switchable anytime to `USD`, `EUR`, `GBP`)
 
 ### 🚀 1-Click Cloud Deployment Guides
+
+#### Option A: Netlify Continuous Deployment (via GitHub)
+1. Go to [Netlify New Site from Git](https://app.netlify.com/start).
+2. Connect your GitHub account and choose `Anil-192005/finwise-ai`.
+3. Netlify automatically detects [`netlify.toml`](netlify.toml):
+   - Base directory: `frontend`
+   - Build command: `npm run build`
+   - Publish directory: `frontend/dist`
+   - SPA Redirects: Handled automatically via `_redirects` and `netlify.toml`.
+4. Add environment variable `VITE_API_BASE_URL` pointing to your deployed backend.
 
 #### Option A: Render (Full-Stack Blueprint)
 The repository contains a battle-tested [`render.yaml`](render.yaml) blueprint configuring:
