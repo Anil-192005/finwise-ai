@@ -11,6 +11,45 @@ FinWise AI is a complete, production-grade personal finance management and expen
 
 ---
 
+## 🌐 Public Deployment & Live Links
+
+- **Public GitHub Repository**: [https://github.com/Anil-192005/finwise-ai](https://github.com/Anil-192005/finwise-ai)
+- **Live Public Access Tunnel (HTTPS)**: [https://some-carrots-retire.loca.lt](https://some-carrots-retire.loca.lt)
+  > *(If prompted with the Localtunnel friendly reminder, enter Endpoint IP: `122.172.83.23` and click "Click to Submit")*
+- **Live Demo Credentials**:
+  - Email: `demo@finwise.ai`
+  - Password: `DemoPass123!`
+  - Currency: `INR (₹)` (switchable anytime to `USD`, `EUR`, `GBP`)
+
+### 🚀 1-Click Cloud Deployment Guides
+
+#### Option A: Render (Full-Stack Blueprint)
+The repository contains a battle-tested [`render.yaml`](render.yaml) blueprint configuring:
+1. **Managed PostgreSQL Database** (persistent financial records).
+2. **FastAPI Web Service** (Uvicorn production ASGI server).
+3. **React + Vite Static Site** (with SPA rewrite and zero CORS issues).
+
+**Steps to deploy**:
+1. Go to [Render Blueprints](https://dashboard.render.com/blueprints/new).
+2. Connect your GitHub account and select repository: `Anil-192005/finwise-ai`.
+3. Render automatically reads `render.yaml`, provisions the database, sets `DATABASE_URL` and `SECRET_KEY`, and deploys both backend and frontend.
+
+#### Option B: Vercel (Frontend) + Render/Railway (Backend)
+1. **Backend**:
+   - Push repository to Render or Railway.
+   - Root directory: `backend`
+   - Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - Set environment variables: `DATABASE_URL` (PostgreSQL), `SECRET_KEY`, `CORS_ORIGINS=*`.
+2. **Frontend on Vercel**:
+   - Import `Anil-192005/finwise-ai` on [Vercel](https://vercel.com/new).
+   - Set Root Directory: `frontend`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Environment Variable: `VITE_API_BASE_URL` = `https://<YOUR-BACKEND-SERVICE>.onrender.com`
+   - Client-side routing is automatically handled via [`frontend/vercel.json`](frontend/vercel.json).
+
+---
+
 ## 🚀 Key Features
 
 - **📊 Comprehensive Financial Overview**: Real-time calculated KPIs (Total Income, Total Expenses, Net Cash Flow, Total Savings, Budget Utilization, and Savings Rate) for any selected statement period.
