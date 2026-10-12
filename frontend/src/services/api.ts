@@ -23,7 +23,8 @@ const getApiBaseUrl = (): string => {
     const trimmed = envUrl.replace(/\/+$/, '');
     return trimmed.endsWith('/api/v1') ? trimmed : `${trimmed}/api/v1`;
   }
-  return 'http://localhost:8000/api/v1';
+  // Default to relative /api/v1 so Vite dev proxy and same-origin reverse proxies handle routing cleanly
+  return '/api/v1';
 };
 
 const API_BASE_URL = getApiBaseUrl();
