@@ -14,7 +14,7 @@ FinWise AI is a complete, production-grade personal finance management and expen
 ## 🌐 Public Deployment & Live Links
 
 - **Public GitHub Repository**: [https://github.com/Anil-192005/finwise-ai](https://github.com/Anil-192005/finwise-ai)
-- **Live Public Access Tunnel (HTTPS)**: [https://some-carrots-retire.loca.lt](https://some-carrots-retire.loca.lt)
+- **Live Public Access Tunnel (HTTPS)**: [https://tiny-donuts-laugh.loca.lt](https://tiny-donuts-laugh.loca.lt)
   > *(If prompted with the Localtunnel friendly reminder, enter Endpoint IP: `122.172.83.23` and click "Click to Submit")*
 - **Live Demo Credentials**:
   - Email: `demo@finwise.ai`
